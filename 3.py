@@ -39,7 +39,7 @@ def add_time_now(stations):
         station.setdefault('timeNow', actual_time)
 
 
-def find_station_by_cabin_number(stations, cabin_number):
+def find_station_by_cabin_number(stations, cabin_number: int):
     """
     Поиск станции по cabinNumber
 
@@ -61,13 +61,15 @@ with open("astronaut_time.txt", encoding="utf-8") as file:
     headers = ["WatchNumber", "numberStation", "cabinNumber", "timeStop", "count"]
     stations = list(DictReader(file, delimiter=">", fieldnames=headers))
 
+add_time_now(stations)
+
 while True:
     number = input().strip()
 
     if number == "none":
         break
 
-    value = find_station_by_cabin_number(number)
+    value = find_station_by_cabin_number(stations, number)
 
     if value is None:
         print("В этой каюте все хорошо")

@@ -44,16 +44,17 @@ def info_count_groups(stations):
     Вывод информации о группах, у которых остановилось время
     с период с 00.00 до 12.00 и с период с 12.01 до 23.59
 
-    stations - станции
-    :return:
+    stations - все станции
     """
 
     time_after_group = []
     time_before_group = []
+
     left = time(hour=0)
     right = time(hour=12)
     second_left = time(hour=12, minute=1)
     second_right = time(hour=23, minute=59)
+
     for station in stations:
         date = parse_time(station['timeStop'])
 

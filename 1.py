@@ -1,5 +1,5 @@
 from csv import DictReader, DictWriter
-from typing import Tuple
+from datetime import time
 
 
 def parse_time(row_string: str) -> time:
@@ -44,7 +44,6 @@ def cabin_number_info(stations):
     Информация о кабине 98-OYE
 
     stations - все станции
-    :return:
     """
     for station in stations:
         if station['cabinNumber'] == '98-OYE':
