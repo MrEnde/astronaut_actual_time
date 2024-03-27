@@ -75,7 +75,7 @@ def info_first_stations(stations):
 
     """
 
-    sort(unsorted=stations, getter=lambda values: int(values['WatchNumber']))
+    sort(unsorted=stations, getter=lambda values: values['numberStation'])
     for station in stations[:3]:
         print(
             f"На станции {station['numberStation']} в каюте {station['cabinNumber']} "
