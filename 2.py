@@ -73,6 +73,7 @@ def info_first_stations(stations):
     """
     Информация о трёх первых станций, которые нужнаются в помощи
 
+    stations - все станции
     """
 
     sort(unsorted=stations, getter=lambda values: values['numberStation'])
