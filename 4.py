@@ -26,15 +26,13 @@ def info_count_groups(stations):
 
     left = time(hour=0)
     right = time(hour=12)
-    second_left = time(hour=12, minute=1)
-    second_right = time(hour=23, minute=59)
 
     for station in stations:
         date = parse_time(station['timeStop'])
 
         if left <= date <= right:
             time_before_group.append(station)
-        elif second_left <= date <= second_right:
+        else:
             time_after_group.append(station)
 
     print(f"{len(time_before_group)} станций остановилось с период с 00.00 до 12.00")
