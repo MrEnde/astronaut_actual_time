@@ -47,7 +47,7 @@ def cabin_number_info(stations):
     """
     for station in stations:
         if station['cabinNumber'] == '98-OYE':
-            print(f"{station["timeNow"]} - действительное время для каюты: {station['cabinNumber']}")
+            print(f"{station['timeNow']} - действительное время для каюты: {station['cabinNumber']}")
 
 
 with open("astronaut_time.txt", encoding="utf-8") as file:
