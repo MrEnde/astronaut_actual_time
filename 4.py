@@ -25,7 +25,7 @@ def info_count_groups(stations):
     time_before_group = []
 
     left = time(hour=0)
-    right = time(hour=12)
+    right = time(hour=12, second=59)
 
     for station in stations:
         date = parse_time(station['timeStop'])
